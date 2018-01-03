@@ -10,8 +10,17 @@
 		F94E49631FFCE9CD009A942A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49621FFCE9CD009A942A /* AppDelegate.swift */; };
 		F94E49651FFCE9CD009A942A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49641FFCE9CD009A942A /* ViewController.swift */; };
 		F94E49681FFCE9CD009A942A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E49661FFCE9CD009A942A /* Main.storyboard */; };
-		F94E496A1FFCE9CD009A942A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94E49691FFCE9CD009A942A /* Assets.xcassets */; };
 		F94E496D1FFCE9CD009A942A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E496B1FFCE9CD009A942A /* LaunchScreen.storyboard */; };
+		F94E49751FFCEA22009A942A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94E49741FFCEA22009A942A /* Assets.xcassets */; };
+		F94E497A1FFCEA83009A942A /* AsteroidBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49761FFCEA82009A942A /* AsteroidBehavior.swift */; };
+		F94E497B1FFCEA83009A942A /* AsteroidFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49771FFCEA83009A942A /* AsteroidFieldView.swift */; };
+		F94E497C1FFCEA83009A942A /* GoldBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49781FFCEA83009A942A /* GoldBehavior.swift */; };
+		F94E497D1FFCEA83009A942A /* GoldFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49791FFCEA83009A942A /* GoldFieldView.swift */; };
+		F94E49A11FFCEB32009A942A /* SpaceshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E499D1FFCEB31009A942A /* SpaceshipView.swift */; };
+		F94E49A21FFCEB32009A942A /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E499E1FFCEB31009A942A /* CoreGraphicsExtensions.swift */; };
+		F94E49A31FFCEB32009A942A /* GoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E499F1FFCEB32009A942A /* GoldView.swift */; };
+		F94E49A41FFCEB32009A942A /* AsteroidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49A01FFCEB32009A942A /* AsteroidView.swift */; };
+		F94E49A61FFCECC8009A942A /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49A51FFCECC8009A942A /* StartVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +28,18 @@
 		F94E49621FFCE9CD009A942A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F94E49641FFCE9CD009A942A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F94E49671FFCE9CD009A942A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F94E49691FFCE9CD009A942A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F94E496C1FFCE9CD009A942A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F94E496E1FFCE9CD009A942A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F94E49741FFCEA22009A942A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../L14 Asteroids/Asteroids/Assets.xcassets"; sourceTree = "<group>"; };
+		F94E49761FFCEA82009A942A /* AsteroidBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidBehavior.swift; sourceTree = "<group>"; };
+		F94E49771FFCEA83009A942A /* AsteroidFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidFieldView.swift; sourceTree = "<group>"; };
+		F94E49781FFCEA83009A942A /* GoldBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldBehavior.swift; sourceTree = "<group>"; };
+		F94E49791FFCEA83009A942A /* GoldFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldFieldView.swift; sourceTree = "<group>"; };
+		F94E499D1FFCEB31009A942A /* SpaceshipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceshipView.swift; sourceTree = "<group>"; };
+		F94E499E1FFCEB31009A942A /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		F94E499F1FFCEB32009A942A /* GoldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldView.swift; sourceTree = "<group>"; };
+		F94E49A01FFCEB32009A942A /* AsteroidView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidView.swift; sourceTree = "<group>"; };
+		F94E49A51FFCECC8009A942A /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +74,29 @@
 			children = (
 				F94E49621FFCE9CD009A942A /* AppDelegate.swift */,
 				F94E49641FFCE9CD009A942A /* ViewController.swift */,
+				F94E49761FFCEA82009A942A /* AsteroidBehavior.swift */,
+				F94E49771FFCEA83009A942A /* AsteroidFieldView.swift */,
+				F94E49781FFCEA83009A942A /* GoldBehavior.swift */,
+				F94E49791FFCEA83009A942A /* GoldFieldView.swift */,
 				F94E49661FFCE9CD009A942A /* Main.storyboard */,
-				F94E49691FFCE9CD009A942A /* Assets.xcassets */,
+				F94E49A51FFCECC8009A942A /* StartVC.swift */,
+				F94E49741FFCEA22009A942A /* Assets.xcassets */,
 				F94E496B1FFCE9CD009A942A /* LaunchScreen.storyboard */,
 				F94E496E1FFCE9CD009A942A /* Info.plist */,
+				F94E497E1FFCEA8D009A942A /* Asteroids */,
 			);
 			path = fngame;
+			sourceTree = "<group>";
+		};
+		F94E497E1FFCEA8D009A942A /* Asteroids */ = {
+			isa = PBXGroup;
+			children = (
+				F94E49A01FFCEB32009A942A /* AsteroidView.swift */,
+				F94E499E1FFCEB31009A942A /* CoreGraphicsExtensions.swift */,
+				F94E499F1FFCEB32009A942A /* GoldView.swift */,
+				F94E499D1FFCEB31009A942A /* SpaceshipView.swift */,
+			);
+			path = Asteroids;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F94E496D1FFCE9CD009A942A /* LaunchScreen.storyboard in Resources */,
-				F94E496A1FFCE9CD009A942A /* Assets.xcassets in Resources */,
+				F94E49751FFCEA22009A942A /* Assets.xcassets in Resources */,
 				F94E49681FFCE9CD009A942A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +171,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94E497B1FFCEA83009A942A /* AsteroidFieldView.swift in Sources */,
+				F94E49A21FFCEB32009A942A /* CoreGraphicsExtensions.swift in Sources */,
+				F94E49A11FFCEB32009A942A /* SpaceshipView.swift in Sources */,
+				F94E49A41FFCEB32009A942A /* AsteroidView.swift in Sources */,
+				F94E497A1FFCEA83009A942A /* AsteroidBehavior.swift in Sources */,
 				F94E49651FFCE9CD009A942A /* ViewController.swift in Sources */,
+				F94E497D1FFCEA83009A942A /* GoldFieldView.swift in Sources */,
+				F94E497C1FFCEA83009A942A /* GoldBehavior.swift in Sources */,
+				F94E49A61FFCECC8009A942A /* StartVC.swift in Sources */,
+				F94E49A31FFCEB32009A942A /* GoldView.swift in Sources */,
 				F94E49631FFCE9CD009A942A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -277,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9EZG3V6S8;
 				INFOPLIST_FILE = fngame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbd.fngame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9EZG3V6S8;
 				INFOPLIST_FILE = fngame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lbd.fngame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
