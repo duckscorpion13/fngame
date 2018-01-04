@@ -12,6 +12,7 @@ class ViewController: UIViewController
 {
     //    let cmmgr = CMMotionManager()
     
+    @IBOutlet var lblGoal: UILabel!
     private var asteroidField: AsteroidFieldView!
     private var goldField: GoldFieldView!
     
@@ -23,6 +24,17 @@ class ViewController: UIViewController
     private var asteroidBehavior = AsteroidBehavior()
     
     private var goldBehavior = GoldBehavior()
+    
+    var goal = 0 {
+        didSet {
+            DispatchQueue.main.async {
+                [weak self] in
+                if let strongSelf = self {
+                    strongSelf.lblGoal.text = "\(strongSelf.goal)"
+                }
+            }
+        }
+    }
     
     // MARK: View Controller Lifecycle
     
@@ -71,7 +83,7 @@ class ViewController: UIViewController
         }
         
         if goldField == nil {
-            goldField = GoldFieldView(frame: CGRect(center: view.bounds.mid, size: view.bounds.size * Constants.asteroidFieldMagnitude))
+            goldField = GoldFieldView(frame: CGRect(center: view.bounds.mid, size: view.bounds.size))// * Constants.asteroidFieldMagnitude))
             view.addSubview(goldField)
             goldField.addGolds(count: Constants.initialGoldCount, exclusionZone: ship.convert(ship.bounds, to: goldField))
             goldField.goldBehavior = goldBehavior
@@ -115,8 +127,10 @@ class ViewController: UIViewController
                 if let ship = self?.ship {
                     if !ship.shieldIsActive {
                         ship.shieldIsActive = true
-                        ship.shieldLevel += Constants.Shield.activationCost
+                        ship.shieldLevel += 1
+                        
                         if let strongSelf = self {
+                            strongSelf.goal += 1
                             Timer.scheduledTimer(timeInterval: Constants.Shield.duration,
                                                  target: strongSelf,
                                                  selector: #selector(self?.updateTime),
@@ -169,12 +183,12 @@ class ViewController: UIViewController
     
     private struct Constants {
         static let initialAsteroidCount = 60
-        static let initialGoldCount = 30
+        static let initialGoldCount = 5
         static let shipBoundaryName = "Ship"
         static let shipSizeToMinBoundsEdgeRatio: CGFloat = 1/5
         static let asteroidFieldMagnitude: CGFloat = 10             // as a multiple of view.bounds.size
         static let normalizedDistanceOfShipFromEdge: CGFloat = 0.2
-        static let burnAcceleration: CGFloat = 0.07                 // points/s/s
+        static let burnAcceleration: CGFloat = 0.307                 // points/s/s
         struct Shield {
             static let duration: TimeInterval = 1.0       // how long shield stays up
             static let updateInterval: TimeInterval = 0.2 // how often we update shield level
