@@ -49,7 +49,7 @@ class GoldBehavior: UIDynamicBehavior, UICollisionBehaviorDelegate
     // MARK: Adding and Removing Asteroids
     
     private var golds = [GoldView]()
-    var speedLimit: CGFloat = 300.0
+    var speedLimit: CGFloat = 150.0
     
     override init() {
         super.init()
@@ -123,6 +123,11 @@ class GoldBehavior: UIDynamicBehavior, UICollisionBehaviorDelegate
         ) {
         if let name = identifier as? String, let handler = collisionHandlers[name] {
             handler()
+            
+            if let gold = item as? GoldView {
+                removeGold(gold)
+                gold.removeFromSuperview()
+            }
         }
     }
     

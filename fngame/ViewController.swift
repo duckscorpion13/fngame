@@ -183,7 +183,7 @@ class ViewController: UIViewController
     
     private struct Constants {
         static let initialAsteroidCount = 60
-        static let initialGoldCount = 5
+        static let initialGoldCount = 20
         static let shipBoundaryName = "Ship"
         static let shipSizeToMinBoundsEdgeRatio: CGFloat = 1/5
         static let asteroidFieldMagnitude: CGFloat = 10             // as a multiple of view.bounds.size
@@ -193,7 +193,7 @@ class ViewController: UIViewController
             static let duration: TimeInterval = 1.0       // how long shield stays up
             static let updateInterval: TimeInterval = 0.2 // how often we update shield level
             static let regenerationRate: Double = 5       // per second
-            static let activationCost: Double = 15        // per activation
+            static let activationCost: Double = 25        // per activation
             static var regenerationPerUpdate: Double
             { return Constants.Shield.regenerationRate * Constants.Shield.updateInterval }
             static var activationCostPerUpdate: Double
