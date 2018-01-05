@@ -20,6 +20,21 @@ class AsteroidFieldView: UIView
         }
     }
     
+    var goldBehavior: GoldBehavior? {
+        didSet {
+            for asteroid in golds {
+                oldValue?.removeGold(asteroid)
+                goldBehavior?.addGold(asteroid)
+            }
+        }
+    }
+    
+    // get all of our asteroids
+    // by converting our subviews array
+    // into an array of all subviews that are AsteroidView
+    private var golds: [GoldView] {
+        return subviews.flatMap { $0 as? GoldView }
+    }
     // get all of our asteroids
     // by converting our subviews array
     // into an array of all subviews that are AsteroidView
@@ -42,6 +57,20 @@ class AsteroidFieldView: UIView
             } while !exclusionZone.isEmpty && asteroid.frame.intersects(exclusionZone)
             addSubview(asteroid)
             asteroidBehavior?.addAsteroid(asteroid)
+        }
+    }
+    
+    func addGolds(count: Int, exclusionZone: CGRect = CGRect.zero) {
+        assert(!bounds.isEmpty, "can't add asteroids to an empty field")
+        let averageAsteroidSize = bounds.size * scale
+        for _ in 0..<count {
+            let asteroid = GoldView()
+            asteroid.frame.size = (asteroid.frame.size / (asteroid.frame.size.area / averageAsteroidSize.area))// * CGFloat.random(in: minAsteroidSize..<maxAsteroidSize)
+            repeat {
+                asteroid.frame.origin = bounds.randomPoint
+            } while !exclusionZone.isEmpty && asteroid.frame.intersects(exclusionZone)
+            addSubview(asteroid)
+            goldBehavior?.addGold(asteroid)
         }
     }
 }

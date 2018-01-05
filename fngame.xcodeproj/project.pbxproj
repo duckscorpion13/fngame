@@ -8,25 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		F94E49631FFCE9CD009A942A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49621FFCE9CD009A942A /* AppDelegate.swift */; };
-		F94E49651FFCE9CD009A942A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49641FFCE9CD009A942A /* ViewController.swift */; };
+		F94E49651FFCE9CD009A942A /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49641FFCE9CD009A942A /* GameVC.swift */; };
 		F94E49681FFCE9CD009A942A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E49661FFCE9CD009A942A /* Main.storyboard */; };
 		F94E496D1FFCE9CD009A942A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E496B1FFCE9CD009A942A /* LaunchScreen.storyboard */; };
 		F94E49751FFCEA22009A942A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94E49741FFCEA22009A942A /* Assets.xcassets */; };
 		F94E497A1FFCEA83009A942A /* AsteroidBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49761FFCEA82009A942A /* AsteroidBehavior.swift */; };
 		F94E497B1FFCEA83009A942A /* AsteroidFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49771FFCEA83009A942A /* AsteroidFieldView.swift */; };
 		F94E497C1FFCEA83009A942A /* GoldBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49781FFCEA83009A942A /* GoldBehavior.swift */; };
-		F94E497D1FFCEA83009A942A /* GoldFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49791FFCEA83009A942A /* GoldFieldView.swift */; };
 		F94E49A11FFCEB32009A942A /* SpaceshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E499D1FFCEB31009A942A /* SpaceshipView.swift */; };
 		F94E49A21FFCEB32009A942A /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E499E1FFCEB31009A942A /* CoreGraphicsExtensions.swift */; };
 		F94E49A31FFCEB32009A942A /* GoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E499F1FFCEB32009A942A /* GoldView.swift */; };
 		F94E49A41FFCEB32009A942A /* AsteroidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49A01FFCEB32009A942A /* AsteroidView.swift */; };
 		F94E49A61FFCECC8009A942A /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49A51FFCECC8009A942A /* StartVC.swift */; };
+		F9A88EF71FFF850300337DE1 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A88EF61FFF850300337DE1 /* WebVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F94E495F1FFCE9CD009A942A /* fngame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fngame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94E49621FFCE9CD009A942A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F94E49641FFCE9CD009A942A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F94E49641FFCE9CD009A942A /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		F94E49671FFCE9CD009A942A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F94E496C1FFCE9CD009A942A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F94E496E1FFCE9CD009A942A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,12 +34,12 @@
 		F94E49761FFCEA82009A942A /* AsteroidBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidBehavior.swift; sourceTree = "<group>"; };
 		F94E49771FFCEA83009A942A /* AsteroidFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidFieldView.swift; sourceTree = "<group>"; };
 		F94E49781FFCEA83009A942A /* GoldBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldBehavior.swift; sourceTree = "<group>"; };
-		F94E49791FFCEA83009A942A /* GoldFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldFieldView.swift; sourceTree = "<group>"; };
 		F94E499D1FFCEB31009A942A /* SpaceshipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceshipView.swift; sourceTree = "<group>"; };
 		F94E499E1FFCEB31009A942A /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		F94E499F1FFCEB32009A942A /* GoldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldView.swift; sourceTree = "<group>"; };
 		F94E49A01FFCEB32009A942A /* AsteroidView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidView.swift; sourceTree = "<group>"; };
 		F94E49A51FFCECC8009A942A /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		F9A88EF61FFF850300337DE1 /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +72,12 @@
 		F94E49611FFCE9CD009A942A /* fngame */ = {
 			isa = PBXGroup;
 			children = (
+				F9A88EF61FFF850300337DE1 /* WebVC.swift */,
 				F94E49621FFCE9CD009A942A /* AppDelegate.swift */,
-				F94E49641FFCE9CD009A942A /* ViewController.swift */,
+				F94E49641FFCE9CD009A942A /* GameVC.swift */,
 				F94E49761FFCEA82009A942A /* AsteroidBehavior.swift */,
 				F94E49771FFCEA83009A942A /* AsteroidFieldView.swift */,
 				F94E49781FFCEA83009A942A /* GoldBehavior.swift */,
-				F94E49791FFCEA83009A942A /* GoldFieldView.swift */,
 				F94E49661FFCE9CD009A942A /* Main.storyboard */,
 				F94E49A51FFCECC8009A942A /* StartVC.swift */,
 				F94E49741FFCEA22009A942A /* Assets.xcassets */,
@@ -175,9 +175,9 @@
 				F94E49A21FFCEB32009A942A /* CoreGraphicsExtensions.swift in Sources */,
 				F94E49A11FFCEB32009A942A /* SpaceshipView.swift in Sources */,
 				F94E49A41FFCEB32009A942A /* AsteroidView.swift in Sources */,
+				F9A88EF71FFF850300337DE1 /* WebVC.swift in Sources */,
 				F94E497A1FFCEA83009A942A /* AsteroidBehavior.swift in Sources */,
-				F94E49651FFCE9CD009A942A /* ViewController.swift in Sources */,
-				F94E497D1FFCEA83009A942A /* GoldFieldView.swift in Sources */,
+				F94E49651FFCE9CD009A942A /* GameVC.swift in Sources */,
 				F94E497C1FFCEA83009A942A /* GoldBehavior.swift in Sources */,
 				F94E49A61FFCECC8009A942A /* StartVC.swift in Sources */,
 				F94E49A31FFCEB32009A942A /* GoldView.swift in Sources */,

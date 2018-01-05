@@ -8,18 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class GameVC: UIViewController
 {
     //    let cmmgr = CMMotionManager()
     
     @IBOutlet var lblGoal: UILabel!
     private var asteroidField: AsteroidFieldView!
-    private var goldField: GoldFieldView!
+ 
     
     private var ship: SpaceshipView!
     
     private lazy var animatorAsteroid: UIDynamicAnimator = UIDynamicAnimator(referenceView: self.asteroidField)
-    private lazy var animatorGoid: UIDynamicAnimator = UIDynamicAnimator(referenceView: self.goldField)
+    private lazy var animatorGoid: UIDynamicAnimator = UIDynamicAnimator(referenceView: self.asteroidField)
     
     private var asteroidBehavior = AsteroidBehavior()
     
@@ -80,18 +80,12 @@ class ViewController: UIViewController
             
             asteroidField.addAsteroids(count: Constants.initialAsteroidCount, exclusionZone: ship.convert(ship.bounds, to: asteroidField))
             asteroidField.asteroidBehavior = asteroidBehavior
-        }
-        
-        if goldField == nil {
-            goldField = GoldFieldView(frame: CGRect(center: view.bounds.mid, size: view.bounds.size))// * Constants.asteroidFieldMagnitude))
-            view.addSubview(goldField)
-            goldField.addGolds(count: Constants.initialGoldCount, exclusionZone: ship.convert(ship.bounds, to: goldField))
-            goldField.goldBehavior = goldBehavior
+  
+            asteroidField.addGolds(count: Constants.initialGoldCount, exclusionZone: ship.convert(ship.bounds, to: asteroidField))
+            asteroidField.goldBehavior = goldBehavior
             
-            
+            repositionShip()
         }
-        
-        repositionShip()
     }
     
     private func repositionShip() {
@@ -119,10 +113,8 @@ class ViewController: UIViewController
                     }
                 }
             }
-        }
-        if goldField != nil {
-            ship.center = goldField.center
-            goldBehavior.setBoundary(ship.shieldBoundary(in: goldField), named: Constants.shipBoundaryName) {
+    
+            goldBehavior.setBoundary(ship.shieldBoundary(in: asteroidField), named: Constants.shipBoundaryName) {
                 [weak self] in
                 if let ship = self?.ship {
                     if !ship.shieldIsActive {
@@ -176,7 +168,7 @@ class ViewController: UIViewController
     
     private func endBurn() {
         ship.enginesAreFiring = false
-        asteroidBehavior.acceleration.magnitude = 0
+        asteroidBehavior.acceleration.magnitude = 0.1
     }
     
     // MARK: Constants
@@ -215,7 +207,7 @@ class ViewController: UIViewController
     }
 }
 
-extension ViewController: SpaceshipViewDelegate
+extension GameVC: SpaceshipViewDelegate
 {
     func handleGameOver()
     {

@@ -34,7 +34,7 @@ class GoldBehavior: UIDynamicBehavior, UICollisionBehaviorDelegate
         return behavior
     }()
     
-    func pushAllGolds(by magnitude: Range<CGFloat> = 0..<0.5) {
+    func pushAllGolds(by magnitude: Range<CGFloat> = 0.1..<0.2) {
         for asteroid in golds {
             let pusher = UIPushBehavior(items: [asteroid], mode: .instantaneous)
             pusher.magnitude = CGFloat.random(in: magnitude)

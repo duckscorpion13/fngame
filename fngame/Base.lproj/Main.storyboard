@@ -13,7 +13,7 @@
         <!--StartVC-->
         <scene sceneID="Fl3-mB-cYK">
             <objects>
-                <viewController id="HNb-yk-1oq" customClass="StartVC" customModule="fngame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartVC" id="HNb-yk-1oq" customClass="StartVC" customModule="fngame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GAK-qg-PPa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="-1346" y="48"/>
         </scene>
-        <!--View Controller-->
+        <!--GameVC-->
         <scene sceneID="Ikf-va-Rmt">
             <objects>
-                <viewController id="DM0-3z-PNF" customClass="ViewController" customModule="fngame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DM0-3z-PNF" customClass="GameVC" customModule="fngame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FVi-w1-f2e"/>
                         <viewControllerLayoutGuide type="bottom" id="Jt0-wx-UWL"/>
@@ -54,7 +54,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62L-5h-6IN">
-                                <rect key="frame" x="154.5" y="40" width="68" height="30"/>
+                                <rect key="frame" x="153.5" y="40" width="68" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="goal : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-Xh-YvH">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
@@ -100,6 +100,21 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-484" y="49"/>
+        </scene>
+        <!--WebVC-->
+        <scene sceneID="Ohs-ek-Fuu">
+            <objects>
+                <viewController storyboardIdentifier="WebVC" id="sSP-wN-Eel" customClass="WebVC" customModule="fngame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o7q-dB-sXH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eat-uG-OKr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c7D-IE-122" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1346" y="-710"/>
         </scene>
     </scenes>
     <resources>
