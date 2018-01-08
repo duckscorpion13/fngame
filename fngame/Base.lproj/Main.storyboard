@@ -18,16 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="6CY-u7-vg1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzM-9I-am4" userLabel="Start">
-                                <rect key="frame" x="170" y="318" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
+                                <rect key="frame" x="166" y="315" width="42" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="DM0-3z-PNF" kind="show" id="2ke-gM-NSw"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="6CY-u7-vg1" firstAttribute="leading" secondItem="4db-Cl-Rke" secondAttribute="leading" id="IBf-DP-wEZ"/>
+                            <constraint firstItem="4db-Cl-Rke" firstAttribute="trailing" secondItem="6CY-u7-vg1" secondAttribute="trailing" id="WaL-7C-S9u"/>
+                            <constraint firstItem="4db-Cl-Rke" firstAttribute="bottom" secondItem="6CY-u7-vg1" secondAttribute="bottom" id="XsQ-gP-cOs"/>
+                            <constraint firstItem="6CY-u7-vg1" firstAttribute="top" secondItem="4db-Cl-Rke" secondAttribute="top" id="qH3-wA-gLY"/>
                             <constraint firstItem="dzM-9I-am4" firstAttribute="centerY" secondItem="GAK-qg-PPa" secondAttribute="centerY" id="tn9-3b-KNq"/>
                             <constraint firstItem="dzM-9I-am4" firstAttribute="centerX" secondItem="GAK-qg-PPa" secondAttribute="centerX" id="uto-W0-EEM"/>
                         </constraints>
@@ -36,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZO-X1-dMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1346" y="48"/>
+            <point key="canvasLocation" x="-1346.4000000000001" y="47.226386806596707"/>
         </scene>
         <!--GameVC-->
         <scene sceneID="Ikf-va-Rmt">
@@ -137,6 +146,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="launch" width="640" height="1136"/>
         <image name="volcano" width="518" height="900"/>
     </resources>
 </document>

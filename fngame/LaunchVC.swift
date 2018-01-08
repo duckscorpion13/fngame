@@ -18,51 +18,56 @@ class LaunchVC: UIViewController {
         // Do any additional setup after loading the view.
         //        var flag_login = 0  //修改這個值 以改變 init view
         
-        if let url = URL(string: "https://las-stream.tk/appweb/test.json") {
+        if let url = URL(string: "https://las-stream.tk/appweb/test.jso") {
             let urlRequest = URLRequest(url: url)
             let config = URLSessionConfiguration.default
             let session = URLSession(configuration: config)
             
             // make the request
             let task = session.dataTask(with: urlRequest) {
+                [weak self]
                 (data, response, error) in
-                if error == nil {
-                    if let usableData = data {
-                        do {
-                            if let array = try JSONSerialization.jsonObject(with: usableData) as? [Any] {
-//                                print(array)
-                                for item in array {
-                                    if let json = item as? [String : Any],
-                                    let ver = json["version"] as? String,
-                                    let urls = json["URL"] as? [String] {
-                                        print(ver)
-                                        for url in urls {
-                                            print(url)
-                                        }
-                                        if(ver == "1.0.0") {
-                                            self.urls = urls
+                
+                if let strongSelf = self {
+                    if error == nil {
+                        if let usableData = data {
+                            do {
+                                if let array = try JSONSerialization.jsonObject(with: usableData) as? [Any] {
+                                    //                                print(array)
+                                    for item in array {
+                                        if let json = item as? [String : Any],
+                                            let ver = json["version"] as? String,
+                                            let urls = json["URL"] as? [String] {
+                                            print(ver)
+                                            if(ver == "1.0.0") {
+                                                strongSelf.urls = urls
+                                                
+                                                for url in urls {
+                                                    print(url)
+                                                }
+                                            }
                                         }
                                     }
+                                    DispatchQueue.main.async {
+                                        strongSelf.performSegue(withIdentifier: "LaunchVC2WebVC", sender: nil)
+                                    }
                                 }
+                            } catch {
+                                print(error)
                                 DispatchQueue.main.async {
-                                    self.performSegue(withIdentifier: "LaunchVC2WebVC", sender: nil)
+                                    strongSelf.performSegue(withIdentifier: "LaunchVC2StartVC", sender: nil)
                                 }
                             }
-                        } catch {
-                            print(error)
+                            
+                        } else {
                             DispatchQueue.main.async {
-                                self.performSegue(withIdentifier: "LaunchVC2StartVC", sender: nil)
+                                strongSelf.performSegue(withIdentifier: "LaunchVC2StartVC", sender: nil)
                             }
                         }
-                        
                     } else {
                         DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: "LaunchVC2StartVC", sender: nil)
+                            strongSelf.performSegue(withIdentifier: "LaunchVC2StartVC", sender: nil)
                         }
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "LaunchVC2StartVC", sender: nil)
                     }
                 }
             }

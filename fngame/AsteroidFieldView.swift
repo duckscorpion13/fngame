@@ -62,7 +62,7 @@ class AsteroidFieldView: UIView
     
     func addGolds(count: Int, exclusionZone: CGRect = CGRect.zero) {
         assert(!bounds.isEmpty, "can't add asteroids to an empty field")
-        let averageAsteroidSize = bounds.size * scale
+        let averageAsteroidSize = bounds.size * scale / 2
         for _ in 0..<count {
             let asteroid = GoldView()
             asteroid.frame.size = (asteroid.frame.size / (asteroid.frame.size.area / averageAsteroidSize.area))// * CGFloat.random(in: minAsteroidSize..<maxAsteroidSize)
