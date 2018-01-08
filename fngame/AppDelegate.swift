@@ -15,57 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        var flag_login = 0  //修改這個值 以改變 init view
-        
-        if let url = URL(string: "https://las-stream.tk/appweb/test.json") {
-            let urlRequest = URLRequest(url: url)
-            let config = URLSessionConfiguration.default
-            let session = URLSession(configuration: config)
-            
-            // make the request
-            let task = session.dataTask(with: urlRequest) {
-                (data, response, error) in
-                if error != nil {
-                    print(error)
-                } else {
-                    if let usableData = data,
-                    let string = String(data: usableData, encoding: String.Encoding.utf8) {
-//                        print(string) //JSONSerialization
-                        
-                        var json: [Any]?
-                        do {
-                            json = try JSONSerialization.jsonObject(with: usableData) as! [Any]
-                            print(json)
-                        } catch {
-                            print(error)
-                        }
-                        
-                    }
-                }
-            }.resume()
-        }
-        
-        if (flag_login == 0) { //還沒登入
-            
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            let storyboard = UIStoryboard(name: "Main", bundle: nil) //Storyboard的名稱
-            
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "StartVC") // view 的 ID
-            
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-            
-        } else { //已經登入
-            
-            
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            let storyboard = UIStoryboard(name: "Main", bundle: nil) //Storyboard的名稱
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "WebVC") // view 的 ID
-            
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-        }
         // Override point for customization after application launch.
         return true
     }

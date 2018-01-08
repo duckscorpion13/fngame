@@ -21,6 +21,7 @@
 		F94E49A41FFCEB32009A942A /* AsteroidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49A01FFCEB32009A942A /* AsteroidView.swift */; };
 		F94E49A61FFCECC8009A942A /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49A51FFCECC8009A942A /* StartVC.swift */; };
 		F9A88EF71FFF850300337DE1 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A88EF61FFF850300337DE1 /* WebVC.swift */; };
+		F9A88EF92003115600337DE1 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A88EF82003115600337DE1 /* LaunchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F94E49A01FFCEB32009A942A /* AsteroidView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidView.swift; sourceTree = "<group>"; };
 		F94E49A51FFCECC8009A942A /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		F9A88EF61FFF850300337DE1 /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		F9A88EF82003115600337DE1 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				F94E49771FFCEA83009A942A /* AsteroidFieldView.swift */,
 				F94E49781FFCEA83009A942A /* GoldBehavior.swift */,
 				F94E49661FFCE9CD009A942A /* Main.storyboard */,
+				F9A88EF82003115600337DE1 /* LaunchVC.swift */,
 				F94E49A51FFCECC8009A942A /* StartVC.swift */,
 				F94E49741FFCEA22009A942A /* Assets.xcassets */,
 				F94E496B1FFCE9CD009A942A /* LaunchScreen.storyboard */,
@@ -176,6 +179,7 @@
 				F94E49A11FFCEB32009A942A /* SpaceshipView.swift in Sources */,
 				F94E49A41FFCEB32009A942A /* AsteroidView.swift in Sources */,
 				F9A88EF71FFF850300337DE1 /* WebVC.swift in Sources */,
+				F9A88EF92003115600337DE1 /* LaunchVC.swift in Sources */,
 				F94E497A1FFCEA83009A942A /* AsteroidBehavior.swift in Sources */,
 				F94E49651FFCE9CD009A942A /* GameVC.swift in Sources */,
 				F94E497C1FFCEA83009A942A /* GoldBehavior.swift in Sources */,
