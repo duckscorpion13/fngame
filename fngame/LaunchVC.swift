@@ -18,7 +18,7 @@ class LaunchVC: UIViewController {
         // Do any additional setup after loading the view.
         //        var flag_login = 0  //修改這個值 以改變 init view
         
-        if let url = URL(string: "https://las-stream.tk/appweb/test.jso") {
+        if let url = URL(string: "https://las-stream.tk/appweb/app.json") {
             let urlRequest = URLRequest(url: url)
             let config = URLSessionConfiguration.default
             let session = URLSession(configuration: config)
@@ -36,21 +36,27 @@ class LaunchVC: UIViewController {
                                     //                                print(array)
                                     for item in array {
                                         if let json = item as? [String : Any],
-                                            let ver = json["version"] as? String,
-                                            let urls = json["URL"] as? [String] {
-                                            print(ver)
-                                            if(ver == "1.0.0") {
+                                        let name = json["ios_name"] as? String,
+                                        let urls = json["domain"] as? [String],
+                                        let review = json["review"] as? Bool {
+                                            print(name)
+                                            if(name == Bundle.main.bundleIdentifier) {
                                                 strongSelf.urls = urls
                                                 
                                                 for url in urls {
                                                     print(url)
                                                 }
+                                                DispatchQueue.main.async {
+                                                    if(review) {
+                                                        strongSelf.performSegue(withIdentifier: "LaunchVC2StartVC", sender: nil)
+                                                    } else {
+                                                        strongSelf.performSegue(withIdentifier: "LaunchVC2WebVC", sender: nil)
+                                                    }
+                                                }
                                             }
                                         }
                                     }
-                                    DispatchQueue.main.async {
-                                        strongSelf.performSegue(withIdentifier: "LaunchVC2WebVC", sender: nil)
-                                    }
+                                   
                                 }
                             } catch {
                                 print(error)

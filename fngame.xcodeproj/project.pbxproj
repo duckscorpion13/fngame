@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29587420E6B5CC0A0462CD1E /* Pods_fngame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DF294FBD6C7D768B4A0D4 /* Pods_fngame.framework */; };
 		F94E49631FFCE9CD009A942A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49621FFCE9CD009A942A /* AppDelegate.swift */; };
 		F94E49651FFCE9CD009A942A /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E49641FFCE9CD009A942A /* GameVC.swift */; };
 		F94E49681FFCE9CD009A942A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E49661FFCE9CD009A942A /* Main.storyboard */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C6DF294FBD6C7D768B4A0D4 /* Pods_fngame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fngame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F2811E36DAF3936EE3778DC /* Pods-fngame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fngame.release.xcconfig"; path = "Pods/Target Support Files/Pods-fngame/Pods-fngame.release.xcconfig"; sourceTree = "<group>"; };
+		B7925AE49D9D3950CB6CA122 /* Pods-fngame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fngame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fngame/Pods-fngame.debug.xcconfig"; sourceTree = "<group>"; };
 		F94E495F1FFCE9CD009A942A /* fngame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fngame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94E49621FFCE9CD009A942A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F94E49641FFCE9CD009A942A /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
@@ -49,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29587420E6B5CC0A0462CD1E /* Pods_fngame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A06ED125E998D90F9A18CAF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C6DF294FBD6C7D768B4A0D4 /* Pods_fngame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACF0EA90E1E000BF13AB7BBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7925AE49D9D3950CB6CA122 /* Pods-fngame.debug.xcconfig */,
+				5F2811E36DAF3936EE3778DC /* Pods-fngame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F94E49561FFCE9CD009A942A = {
 			isa = PBXGroup;
 			children = (
 				F94E49611FFCE9CD009A942A /* fngame */,
 				F94E49601FFCE9CD009A942A /* Products */,
+				ACF0EA90E1E000BF13AB7BBE /* Pods */,
+				A06ED125E998D90F9A18CAF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +133,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F94E49711FFCE9CD009A942A /* Build configuration list for PBXNativeTarget "fngame" */;
 			buildPhases = (
+				9D52B90931AC7D1D968667BE /* [CP] Check Pods Manifest.lock */,
 				F94E495B1FFCE9CD009A942A /* Sources */,
 				F94E495C1FFCE9CD009A942A /* Frameworks */,
 				F94E495D1FFCE9CD009A942A /* Resources */,
+				BC3E15F9532EB2F6C76E6F54 /* [CP] Embed Pods Frameworks */,
+				8713967913E17F190AF063E3 /* [CP] Copy Pods Resources */,
+				F9A88EFA2004784700337DE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -168,6 +196,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8713967913E17F190AF063E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fngame/Pods-fngame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D52B90931AC7D1D968667BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fngame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC3E15F9532EB2F6C76E6F54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fngame/Pods-fngame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9A88EFA2004784700337DE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 892c7512a3b5d15f872a1ccbd202d3085f171913 f5070470e3d1b78d91aa7d11601a53d23a6f58f8f6608955ab5b4eaeb818fab0";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F94E495B1FFCE9CD009A942A /* Sources */ = {
@@ -320,6 +412,7 @@
 		};
 		F94E49721FFCE9CD009A942A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7925AE49D9D3950CB6CA122 /* Pods-fngame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +429,7 @@
 		};
 		F94E49731FFCE9CD009A942A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F2811E36DAF3936EE3778DC /* Pods-fngame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
